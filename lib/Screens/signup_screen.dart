@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rate_your_day/Models/User.dart';
+import 'package:rate_your_day/Models/user.dart';
 import 'package:rate_your_day/Widgets/datepicker_textfield.dart';
 import 'package:rate_your_day/Widgets/hompage_button.dart';
 import 'package:rate_your_day/Widgets/signup_textfield_widget.dart';

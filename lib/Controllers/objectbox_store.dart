@@ -1,5 +1,5 @@
 import 'package:rate_your_day/objectbox.g.dart';
-import '../Models/User.dart';
+import 'package:rate_your_day/Models/user.dart';
 
 class ObjectBox {
   late final Store store;
