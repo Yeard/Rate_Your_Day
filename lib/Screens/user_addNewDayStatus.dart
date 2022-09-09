@@ -21,8 +21,7 @@ class _User_addNewDayStatusState extends State<User_addNewDayStatus> {
   String? dropdownVal;
   TextEditingController dateInput = TextEditingController();
   TextEditingController note = TextEditingController();
-  TextEditingController passwordInput = TextEditingController();
-  TextEditingController nicknameInput = TextEditingController();
+
   @override
   void initState() {
     dateInput.text = "";
