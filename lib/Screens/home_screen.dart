@@ -74,9 +74,8 @@ class HomeScreen extends StatelessWidget {
                       ),
                       HomePageButton(
                         buttonTitle: "Sign Up via GOOGLE",
-                        buttonOnPressed: () {
-                          //button for google signup.
-                        },
+                        buttonOnPressed: () => Navigator.pushNamed(
+                            context, '/user_addNewDayStatus'),
                       ),
                     ],
                   ),
