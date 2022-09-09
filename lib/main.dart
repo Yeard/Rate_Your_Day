@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
-import './widgets/user_dash_bord.dart';
-import './widgets/user_login_page.dart';
+import 'package:rate_your_day/Controllers/objectbox_store.dart';
+import 'package:rate_your_day/Screens/home_screen.dart';
+import 'package:rate_your_day/Screens/signup_screen.dart';
+import 'package:rate_your_day/Screens/user_dashboard_screen.dart';
+import 'Screens/login_screen.dart';
 
-void main() {
+late ObjectBox objectBox;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  objectBox = await ObjectBox.create();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'RateYourDay',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: TextTheme(
-          headline1: TextStyle(color: Colors.deepPurpleAccent),
-          headline2: TextStyle(color: Colors.deepPurpleAccent),
-          bodyText2: TextStyle(color: Color.fromARGB(255, 43, 14, 122)),
-          subtitle1: TextStyle(color: Colors.pinkAccent),
-        ),
+        primarySwatch: Colors.teal,
       ),
-      home: const User_Login_page(),
+      home: const HomeScreen(),
       routes: {
-        '/UserDashBord': (context) => User_dash_bord(),
+        '/signup_screen': (context) => const SignUpScreen(),
+        '/login_screen': (context) => const LoginScreen(),
+        '/user_dashboard_screen': (context) => const UserDashboardScreen(),
       },
     );
   }
